@@ -2,7 +2,7 @@ let nameList = [];
 
 
 const initButtons =()=>{
-    let shuttledlist; 
+
 
     const addButton = document.querySelector('#addbtn');
     addButton.addEventListener('click', () => { 
@@ -26,8 +26,8 @@ const initButtons =()=>{
     divideInGroups.addEventListener('click', () => {
         const nb = document.querySelector('#nmbPpl').value;
         let result =[];
-        while(shuffledList.length){
-            let group = shuffledList.splice(0,nb);
+        while(nameList.length){
+            let group = nameList.splice(0,nb);
             result.push(group)
         }
         showResult(result);
@@ -35,7 +35,7 @@ const initButtons =()=>{
 
 }
 
-const showResult=(shuffledList) => {
+const showResult=(nameList) => {
     const resultDiv = document.querySelector('#result');
     for(let group of nameList){
         const groupDiv = document.createElement('div');
@@ -75,8 +75,8 @@ const shuffle = (array) => {
 
 
 
-let shuffledList = shuffle(nameList);
-console.log("names: ", shuffle(nameList));
+// let shuffledList = shuffle(nameList);
+// console.log("names: ", shuffle(nameList));
     
     
 
