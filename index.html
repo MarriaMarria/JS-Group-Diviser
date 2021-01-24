@@ -3,36 +3,38 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"> 
         <title>Group diviser</title>
     </head>
     <body>
+        <div class="container">
+            <h1>Welcome to the group diviser!</h1>
+            
+            <!-- getting names and creating a list -->
+            <label for="name">Enter your name:</label>
+            <input id="name" type="text" name="name">
+            <button id="addbtn" type="button" value="add">Add a name</button>
+            <ul id="storeNames">
+            </ul>
 
-        <h1>Welcome to the group diviser!</h1>
         
-        <!-- getting names and creating a list -->
-        <label for="name">Enter your name:</label>
-        <input id="name" type="text" name="name">
-        <button id="addbtn" type="button" value="add">Add a name</button>
-        <ul id="storeNames">
-        </ul>
 
-    
-
-        <!-- ask how many ppl by group we wanna have-->
-        <label for="nmbPpl">How many people in group?</label>
-        <input id="nmbPpl" type="number" name="nmbPpl">
+            <!-- ask how many ppl by group we wanna have-->
+            <label for="nmbPpl">How many people in group?</label>
+            <input id="nmbPpl" type="number" name="nmbPpl">
 
 
-        <!-- button to divide in groups -->
-        <button id="dividebtn" type="button" value="divide">Divide in groups</button>
+            <!-- button to divide in groups -->
+            <button id="dividebtn" type="button" value="divide">Divide in groups</button>
 
-        <!-- result -->
-        <div id="result"></div>
+            <!-- result -->
+            <div id="result"></div>
 
 
 
 
-
+        </div>  
         <script src="script.js"></script>
     </body>
 </html>
