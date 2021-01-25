@@ -24,10 +24,11 @@ const initButtons =()=>{
 
     const divideInGroups = document.querySelector('#dividebtn');
     divideInGroups.addEventListener('click', () => {
+        let shuffledList = shuffle(nameList)
         const nb = document.querySelector('#nmbPpl').value;
         let result =[];
-        while(nameList.length){
-            let group = nameList.splice(0,nb);
+        while(shuffledList.length){
+            let group = shuffledList.splice(0,nb);
             result.push(group)
         }
         showResult(result);
@@ -35,9 +36,9 @@ const initButtons =()=>{
 
 }
 
-const showResult=(nameList) => {
+const showResult=(shuffledList) => {
     const resultDiv = document.querySelector('#result');
-    for(let group of nameList){
+    for(let group of shuffledList){
         const groupDiv = document.createElement('div');
         groupDiv.classList.add("group");
         let groupList = document.createElement('ul');
